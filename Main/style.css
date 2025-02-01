@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-image: url(../src/img/fundo.png);
+    background-size: cover;
+    text-align: center;
+    padding: 5vh;
+}
+
+.foto_perfil{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+}
+
+.nome{
+    color: whitesmoke;
+    font-family: "Rubik Dirt", serif;
+    font-weight: 400;
+    margin-bottom: 1vh;
+}
+
+.descricao{
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    background-color: rgb(233, 233, 233);
+    padding: 10vh 15vh 5vh 50vh;
+}
+
+h3{
+    font-family: "Rubik Dirt", serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 5vh;
+}
+
+.burgues_list{
+    margin-bottom: 20vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+}
+
+.img_produto{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.p_descricao{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.produtos{
+    width: 500px;
+}
+
+.titulo_preco{
+    font-family: "Rubik Dirt", serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 0vh;
+}
+
+.btn_compra{
+    background-color: rgb(255, 69, 69);
+    padding: 5px;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_compra:hover{
+   background-color: red;
+}
+
+.carrinho{
+    background-color: red;
+    width: 100%;
+    padding: 3vh;
+    color: white;
+    font-size: 20px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.finalizar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    text-align: center;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.img_carrinho{
+    width: 25px;
+    height: 25px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-carrinho p {
+    margin: 0;
+    font-size: 16px;
+    flex: 1;
+}
+
+.item-carrinho button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-finalizar, .btn-continuar {
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-finalizar { background-color: green; }
+.btn-continuar { background-color: red; }
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    main {
+        padding: 10vh 5vh;
+    }
+    .burgues_list {
+        grid-template-columns: 1fr;
+    }
+    .produtos {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .descricao {
+        font-size: 18px;
+    }
+    h3, .titulo_preco {
+        font-size: 25px;
+    }
+    .img_produto {
+        width: 12vh;
+        height: 12vh;
+    }
+    .btn_compra {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 3vh;
+    }
+    .foto_perfil {
+        width: 12vh;
+        height: 12vh;
+    }
+    .descricao {
+        font-size: 16px;
+    }
+    .burgues_list {
+        grid-row-gap: 20px;
+    }
+    .finalizar {
+        padding: 2vh;
+    }
+}

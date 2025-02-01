@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardapio_Online</title>
+</head>
+<body>
+    <header>
+        <img class="foto_perfil" src="../src/img/Hanburgaria.jpg" alt="">
+        <h2 class="nome">Burguer Fantasia</h2>
+        <p class="descricao">Segunda á Sexta: 19:00 às 23:30</p>
+    </header>
+    <main>
+        <h3>Burgues</h3>
+        <section class="burgues_list" id="burgues_list">
+            <div class="produtos">
+                
+            </div>
+            <div class="produtos">
+                
+            </div>
+            <div class="produtos">
+               
+            </div>
+        </section>
+        <strong><p>______________________________________________________</p></strong>
+
+        <h3>Porções</h3>
+        <section class="burgues_list" id="porcao_list">
+            
+        </section>
+        <strong><p>______________________________________________________</p></strong>
+
+        <h3>Bebidas</h3>
+        <section class="burgues_list" id="Bebidas_list">
+            
+        </section>
+
+       
+    </main>
+    <div class="finalizar">
+        <button class="carrinho" id="carrinho">Ver carrinho   <img class="img_carrinho" src="../src/img/carrinho.png" alt=""></button>
+    </div>
+    <div id="modal-carrinho" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="itens-carrinho"></div>
+            <h3>Total: R$ <span id="total-carrinho">0,00</span></h3>
+            <button class="btn-finalizar">Finalizar Pedido</button>
+            <button class="btn-continuar">Continuar Comprando</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
